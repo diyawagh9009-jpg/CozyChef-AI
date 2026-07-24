@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Nunito', ui-rounded, system-ui, sans-serif;
+  background: #FFF8F2;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(246, 178, 107, 0.18), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(190, 227, 219, 0.24), transparent 22%),
+    #FFF8F2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(91, 75, 73, 0.45);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(246, 178, 107, 0.35);
+  border-radius: 9999px;
+}
+
+@keyframes floatCozy {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes blink {
+  0%, 20%, 100% { transform: scaleY(1); }
+  10% { transform: scaleY(0.2); }
+}
+
+@keyframes steamRise {
+  0% { opacity: 0.3; transform: translateY(0px) scale(0.95); }
+  100% { opacity: 0; transform: translateY(-32px) scale(1.1); }
+}
