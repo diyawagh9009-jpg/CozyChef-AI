@@ -1,46 +1,186 @@
-# 🍓 Mochi Bites
+🍓 CozyChef AI
 
-A cozy recipe generator that feels like a cute game, built with React, Vite, TailwindCSS, Framer Motion, and an Express backend using OpenAI.
+An AI-powered recipe generator that transforms everyday ingredients into delicious, personalized recipes using Generative AI. CozyChef AI combines a warm, game-inspired interface with a powerful Large Language Model to make cooking fun, simple, and interactive.
 
-## Features
-- Cozy UI inspired by cute mobile games and Sanrio.
-- Ingredient chips and playful mascot interactions.
-- Streaming recipe generation through OpenAI.
-- Smooth micro-animations and sound effects.
-- Responsive layout for desktop, tablet, and mobile.
-- Docker-ready deployment.
+---
 
-## Structure
-- `client/` — React + Tailwind frontend.
-- `server/` — Express API server.
-- `public/` — static assets and placeholders.
-- `Dockerfile` / `docker-compose.yml` — container setup.
+✨ Features
 
-## Setup
-1. Copy `.env.example` to `.env`.
-2. Set `OPENAI_API_KEY` in `.env`.
-3. Install dependencies:
-   - `cd client && npm install`
-   - `cd ../server && npm install`
 
-## Run locally
-- Start backend: `cd server && npm run start`
-- Start frontend: `cd client && npm run dev`
+- 🍽️ Generate recipes from available ingredients
+- 🤖 AI-powered recipe generation using Groq API (Llama 3.3 70B Versatile)
+- 🥗 Supports dietary preferences and serving sizes
+- 📖 Complete recipes with:
+  - Recipe Name
+  - Description
+  - Cooking Time
+  - Difficulty
+  - Calories
+  - Ingredients
+  - Step-by-step Instructions
+  - Chef Tips
+  - Healthy Alternatives
+  - Fun Facts
+  - Presentation Tips
+- 🎨 Cute pastel UI inspired by cozy cooking games
+- 📱 Fully responsive design
+- 🐳 Dockerized for easy deployment
+- ☁️ Cloud deployed with Render
 
-## Docker
-- Build and run: `docker compose up --build`
+---
 
-## AWS App Runner deployment
-1. Push repository to GitHub.
-2. Create a new App Runner service.
-3. Connect to GitHub repository.
-4. Use `Dockerfile` as build configuration.
-5. Set environment variables:
-   - `OPENAI_API_KEY`
-   - `PORT=4000`
-6. Deploy the service.
+🛠️ Tech Stack
 
-## Notes
-- API key stays on server only.
-- Sound can be muted with the toggle.
-- Recipe results are parsed from markdown into collectible recipe cards.
+Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+Backend
+- Node.js
+- Express.js
+
+AI Model
+- Groq API
+- Llama 3.3 70B Versatile
+
+DevOps
+- Docker
+- GitHub
+- Render
+
+---
+
+📂 Project Structure
+
+```
+CozyChef-AI/
+│
+├── client/        # React Frontend
+├── server/        # Express Backend
+├── Dockerfile
+├── docker-compose.yml
+├── .env.example
+└── README.md
+```
+
+---
+
+⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/diyawagh9009-jpg/CozyChef-AI.git
+```
+
+Go to the project
+
+```bash
+cd CozyChef-AI
+```
+
+Install dependencies
+
+```bash
+cd client
+npm install
+
+cd ../server
+npm install
+```
+
+---
+
+🔑 Environment Variables
+
+Create a `.env` file inside the `server` folder.
+
+```
+OPENAI_API_KEY=YOUR_GROQ_API_KEY
+PORT=4000
+```
+
+---
+
+▶️ Run Locally
+
+Start the backend
+
+```bash
+cd server
+npm start
+```
+
+Start the frontend
+
+```bash
+cd client
+npm run dev
+```
+
+Frontend:
+
+```
+http://localhost:5173
+```
+
+Backend:
+
+```
+http://localhost:4000
+```
+
+---
+
+🐳 Docker
+
+Build the Docker image
+
+```bash
+docker build -t cozychef-ai .
+```
+
+Run the container
+
+```bash
+docker run -p 4000:4000 --env-file server/.env cozychef-ai
+```
+
+---
+
+🚀 Live Demo
+
+**Live Application**
+
+https://cozychef-ai.onrender.com
+
+---
+
+💻 GitHub Repository
+
+https://github.com/diyawagh9009-jpg/CozyChef-AI
+
+---
+
+👨‍💻 Team
+
+---
+
+📌 Future Enhancements
+
+- Voice-based ingredient input
+- Image recognition of ingredients
+- Nutrition analysis
+- Weekly meal planner
+- Grocery list generation
+- User authentication
+- Recipe history
+- Multi-language support
+
+---
+
+📄 License
+
+This project was developed for academic purposes as part of the Vibe Coding Masterclass Project.
