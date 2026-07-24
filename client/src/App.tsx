@@ -25,7 +25,7 @@ const loadingMessages = [
   'Almost ready...'
 ]
 
-const badgeList = ['🥚 Egg Master', '🍅 Tomato Lover', '🍝 Pasta Wizard']
+const badgeList = ['🧁 Mochi Master', '🍓 Strawberry Lover', '🍝 Pasta Wizard']
 
 function App() {
   const [input, setInput] = useState('')
